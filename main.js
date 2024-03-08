@@ -11,7 +11,8 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-var circle = L.circle([51.508, -0.11], {
+
+var circle = L.circle([3.1489, 101.6926], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
