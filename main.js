@@ -35,7 +35,7 @@ let countryColor = function(country){
 
 // Plot locations
 let locationCircles = locations.map((loc) => {
-    let locCircle = L.circle([loc.coords.lat, loc.coords.long], {
+    let locCircle = L.circle([loc.latLng.lat, loc.latLng.lng], {
         stroke: true,
         weight: 1,
         color: countryColor(loc.country),
