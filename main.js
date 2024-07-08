@@ -23,14 +23,25 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 //     radius: 500
 // }).addTo(map);
 
+// Color by country
+let countryColor = function(country){
+    switch(country){
+        case "Malaysia":
+            return("red");
+        case "Singapore":
+            return("white");
+    }
+}
 
 // Plot locations
 let locationCircles = locations.map((loc) => {
     let locCircle = L.circle([loc.coords.lat, loc.coords.long], {
-        color: 'red',
-        fillColor: '#f03',
-        fillOpacity: 0.5,
-        radius: 500
+        stroke: true,
+        weight: 1,
+        color: countryColor(loc.country),
+        fillColor: countryColor(loc.country),
+        fillOpacity: .8,
+        radius: 30000
     }).addTo(map);
     return(locCircle);
 });
