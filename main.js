@@ -41,7 +41,8 @@ let locationCircles = locations.map((loc) => {
         color: countryColor(loc.country),
         fillColor: countryColor(loc.country),
         fillOpacity: .8,
-        radius: 30000
+        // radius: 30000,
+        radius: 10000 * loc.getNights(),
     }).addTo(map);
     return(locCircle);
 });
