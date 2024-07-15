@@ -28,17 +28,17 @@ var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles
 let countryColor = function(country){
     switch(country){
         case "Malaysia":
-            return("gold");
+            return("Gold");
         case "Singapore":
-            return("white");
+            return("Silver");
         case "Thailand":
-            return("blue");
+            return("RoyalBlue");
         case "Laos":
-            return("green");
+            return("Green");
         case "Cambodia":
             return("#E49B0F"); //Gamboge
         case "Indonesia":
-            return("red");
+            return("IndianRed");
     }
 }
 
