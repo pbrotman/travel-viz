@@ -42,13 +42,28 @@ let countryColor = function(country){
     }
 }
 
+function styleTransit(trs){
+    let style = {}
+    if(trs.mode == "plane"){
+        style = {
+            weight: 2,
+            color: "grey",
+            opacity: .5,
+        };
+    } else {
+        style = {
+            weight: 1,
+            color: "black",
+            opacity: .8,
+        };
+    }
+    return style
+}
+
 // Plot transits
 let transitLines = transits.map((trs) => {
-    let trsLine = L.polyline([trs.start.latLng, trs.end.latLng], {
-        weight: 1,
-        color: "black",
-        opacity: .8,
-    }).addTo(map);
+    let trsLine = L.polyline([trs.start.latLng, trs.end.latLng], 
+        styleTransit(trs)).addTo(map);
     return(trsLine)
 })
 
