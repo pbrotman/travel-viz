@@ -45,7 +45,9 @@ let countryColor = function(country){
 // Plot transits
 let transitLines = transits.map((trs) => {
     let trsLine = L.polyline([trs.start.latLng, trs.end.latLng], {
-        
+        weight: 1,
+        color: "black",
+        opacity: .8,
     }).addTo(map);
     return(trsLine)
 })
