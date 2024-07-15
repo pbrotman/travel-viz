@@ -42,6 +42,16 @@ let countryColor = function(country){
     }
 }
 
+// Plot transits
+let transitLines = transits.map((trs) => {
+    let trsLine = L.polyline([trs.start.latLng, trs.end.latLng], {
+        
+    }).addTo(map);
+    return(trsLine)
+})
+
+console.log(transitLines);
+
 // Plot locations
 let locationCircles = locations.map((loc) => {
     let locCircle = L.circle([loc.latLng.lat, loc.latLng.lng], {

@@ -16,3 +16,4 @@ def csv_to_json(data_name, in_csv_path, out_json_path):
 
 csv_to_json("locations", "data/locations.csv", "data/locations.json")
 csv_to_json("visits", "data/visits.csv", "data/visits.json")
+csv_to_json("transits", "data/transits.csv", "data/transits.json")
