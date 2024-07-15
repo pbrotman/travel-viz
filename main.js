@@ -19,11 +19,17 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 let countryColor = function(country){
     switch(country){
         case "Malaysia":
-            return("red");
+            return("gold");
         case "Singapore":
             return("white");
         case "Thailand":
             return("blue");
+        case "Laos":
+            return("green");
+        case "Cambodia":
+            return("#E49B0F"); //Gamboge
+        case "Indonesia":
+            return("red");
     }
 }
 
