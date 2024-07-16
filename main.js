@@ -67,7 +67,70 @@ let transitLines = transits.map((trs) => {
     return(trsLine)
 })
 
-console.log(transitLines);
+// // With L.curve
+// let transitLines = transits.map((trs) => {
+//     let trsLine = L.curve([ "M", [trs.start.latLng.lat, trs.start.latLng.lng],
+//         "L", [trs.end.latLng.lat, trs.end.latLng.lng],
+//         "Z"
+//     ], styleTransit(trs))
+//         .addTo(map);
+//     return(trsLine)
+// })
+
+// L.DomEvent.on(map, "click", (e) => console.log(e.latlng));
+
+// console.log(transitLines);
+
+// Plot transit midpoints
+// let transitMidpoints = transits.map((trs) => {
+//     let trsMidpoint = L.circle([(trs.start.latLng.lat+trs.end.latLng.lat)/2, (trs.start.latLng.lng+trs.end.latLng.lng)/2]).addTo(map);
+//     return(trsMidpoint);
+// })
+// let transitMidlines = transits.map((trs) => {
+//     let trsLine = L.polyline([[trs.start.latLng.lat, trs.start.latLng.lat], [trs.end.latLng.lat, trs.end.latLng.lat]], 
+//         styleTransit(trs)).addTo(map);
+//     return(trsLine);
+// })
+
+// let transitMidlines = transits.map((trs) => {
+//     let trsLine = L.polyline([[trs.start.latLng.lng, trs.end.latLng.lat], [trs.end.latLng.lng, trs.start.latLng.lat]], 
+//         styleTransit(trs)).addTo(map);
+//     return(trsLine)
+// })
+
+// // Pick up here:
+// let transitMidpoints = transits.map((trs) => {
+//     const y_start = trs.start.latLng.lat;
+//     const x_start = trs.start.latLng.lng;
+
+//     const y_end = trs.end.latLng.lat;
+//     const x_end = trs.end.latLng.lng;
+
+//     const y_mid = (y_start+y_end)/2;
+//     const x_mid = (x_start+x_end)/2;
+
+//     const trsMidpoint = L.latLng([y_mid, x_mid]);
+//     const slope = (y_end-y_start)/(x_end-x_start);
+//     const slope_inv = -1/slope; //slope inverse
+
+//     let c = .5;
+
+//     const x_delta = c/Math.sqrt(1+slope_inv^2);
+//     const y_delta = slope_inv*c/Math.sqrt(1-slope_inv^2);
+
+//     if(slope_inv<1){
+//         let trsBisector = L.polyline([[x_mid+x_delta, y_mid+y_delta], [x_mid-x_delta, y_mid-y_delta]]).addTo(map);
+//     }
+    
+
+//     let trsMidpointCircle = L.circle(trsMidpoint).addTo(map);
+
+//     // let trsBisector = L.polyline([[trsMidpoint.lat+scaler*Math.sign(-1/slope), trsMidpoint.lng+scaler], [trsMidpoint.lat-scaler*Math.sign(-1/slope), trsMidpoint.lng-scaler]]).addTo(map);
+//     // let trsBisector = L.polyline([[trsMidpoint.lat-scaler/slope, trsMidpoint.lng+scaler], [trsMidpoint.lat+scaler/slope, trsMidpoint.lng-scaler]]).addTo(map);
+
+//     return(trsBisector);
+// })
+// console.log(transitMidpoints);
 
 // Plot locations
 let locationCircles = locations.map((loc) => {
