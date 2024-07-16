@@ -44,18 +44,18 @@ let countryColor = function(country){
 
 function styleTransit(trs){
     let style = {}
-    if(trs.mode == "plane"){
-        style = {
-            weight: 2,
-            color: "grey",
-            opacity: .5,
-        };
-    } else {
-        style = {
-            weight: 1,
-            color: "black",
-            opacity: .8,
-        };
+    switch(trs.mode){
+        case "plane":
+            style.weight = 2;
+            style.color = "grey";
+            style.opacity = .5;
+            break;
+        case "boat":
+            style.dashArray = "3";
+        default:
+            style.weight = 1;
+            style.color = "black";
+            style.opacity = .8;
     }
     return style
 }
