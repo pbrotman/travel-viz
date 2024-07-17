@@ -63,8 +63,26 @@ function styleTransit(trs){
 
 // Plot transits
 let transitLines = transits.map((trs) => {
+
+    //Line
     let trsLine = L.polyline([trs.start.latLng, trs.end.latLng], 
-        styleTransit(trs)).addTo(map);
+        styleTransit(trs));
+    trsLine.addTo(map);
+
+    //Tooltip
+    let toolTip = L.tooltip()
+        .setLatLng(trsLine.getCenter())
+        .setContent(`
+            <b> ${trs.date.toDateString()} </b> <br/>
+            ${trs.start.name} &rarr; ${trs.end.name}<br/>
+            `);
+    trsLine.on("mouseover", () => {
+        toolTip.addTo(map);
+    });
+    trsLine.on("mouseout", () => {
+        toolTip.remove();
+    });
+
     return(trsLine)
 })
 
@@ -72,6 +90,8 @@ console.log(transitLines);
 
 // Plot locations
 let locationCircles = locations.map((loc) => {
+
+    // Circle
     let locCircle = L.circle([loc.latLng.lat, loc.latLng.lng], {
         stroke: true,
         weight: 1,
@@ -82,19 +102,21 @@ let locationCircles = locations.map((loc) => {
     })
     locCircle.addTo(map);
 
+    // Tooltip
     let toolTip = L.tooltip()
         .setLatLng(loc.latLng)
         .setContent(`
             <b>${loc.name}</b> <br/>
             Nights stayed: ${loc.getNights()} <br/>
             Dates visited: ${loc.visits.map((vis) => `<br/> <li>${vis.arrive.toDateString()} - ${vis.depart.toDateString()}`)}
-            `)
+            `);
     locCircle.on("mouseover", () => {
         toolTip.addTo(map);
     });
     locCircle.on("mouseout", () => {
         toolTip.remove();
     });
+
     return(locCircle);
 });
 
