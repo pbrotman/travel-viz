@@ -49,6 +49,7 @@ function styleTransit(trs){
             style.weight = 2;
             style.color = "grey";
             style.opacity = .5;
+            style.dashArray = "8";
             break;
         case "boat":
             style.dashArray = "3";
