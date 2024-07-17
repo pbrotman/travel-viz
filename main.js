@@ -78,10 +78,23 @@ let locationCircles = locations.map((loc) => {
         color: countryColor(loc.country),
         fillColor: countryColor(loc.country),
         fillOpacity: .8,
-        // radius: 30000,
-        // radius: 10000 * loc.getNights(),
         radius: 20000 * Math.sqrt(loc.getNights()),
-    }).addTo(map);
+    })
+    locCircle.addTo(map);
+
+    let toolTip = L.tooltip()
+        .setLatLng(loc.latLng)
+        .setContent(`
+            <b>${loc.name}</b> <br/>
+            Nights stayed: ${loc.getNights()} <br/>
+            Dates visited: ${loc.visits.map((vis) => `<br/> <li>${vis.arrive.toDateString()} - ${vis.depart.toDateString()}`)}
+            `)
+    locCircle.on("mouseover", () => {
+        toolTip.addTo(map);
+    });
+    locCircle.on("mouseout", () => {
+        toolTip.remove();
+    });
     return(locCircle);
 });
 
