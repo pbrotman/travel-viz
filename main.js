@@ -30,7 +30,7 @@ let countryColor = function(country){
         case "Malaysia":
             return("Gold");
         case "Singapore":
-            return("Silver");
+            return("Gray");
         case "Thailand":
             return("RoyalBlue");
         case "Laos":
