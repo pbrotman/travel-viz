@@ -102,13 +102,22 @@ let locationCircles = locations.map((loc) => {
     })
     locCircle.addTo(map);
 
+    // Display visit dates in tooltip
+    function datesTooltip(vis){
+        if(vis.arrive.getTime() === vis.depart.getTime()){
+            return vis.arrive.toDateString();
+        } else {
+            return `${vis.arrive.toDateString()} - ${vis.depart.toDateString()}`
+        }
+    }
+
     // Tooltip
     let toolTip = L.tooltip()
         .setLatLng(loc.latLng)
         .setContent(`
-            <b>${loc.name}</b> <br/>
+            <b>${loc.name} - ${loc.country}</b> <br/>
             Nights stayed: ${loc.getNights()} <br/>
-            Dates visited: ${loc.visits.map((vis) => `<br/> <li>${vis.arrive.toDateString()} - ${vis.depart.toDateString()}`)}
+            Dates visited: ${loc.visits.map((vis) => `<br/> <li>${datesTooltip(vis)}`)}
             `);
     locCircle.on("mouseover", () => {
         toolTip.addTo(map);
