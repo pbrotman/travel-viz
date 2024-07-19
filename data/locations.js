@@ -18,14 +18,6 @@ class Trip {
     }
 }
 
-class Visit {
-    constructor(arrive, depart){
-        this.arrive = new Date(arrive),
-        this.depart = new Date(depart),
-        this.nights = Math.round((this.depart.getTime() - this.arrive.getTime()) / (1000 * 3600 * 24))
-    }
-}
-
 class Location {
     constructor(name, lat, lng, country, visits = []){
         this.name = name,
@@ -36,6 +28,14 @@ class Location {
         this.getNights = function(){
             return this.visits.map(vis => vis.nights).reduce((tot, cur) => tot + cur)
         }
+    }
+}
+
+class Visit {
+    constructor(arrive, depart){
+        this.arrive = new Date(arrive),
+        this.depart = new Date(depart),
+        this.nights = Math.round((this.depart.getTime() - this.arrive.getTime()) / (1000 * 3600 * 24))
     }
 }
 
