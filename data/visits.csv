@@ -1,43 +1,43 @@
-Location,Arrive,Depart
-Kuala Lumpur,05 Dec 2023,07 Dec 2023
-Malacca,07 Dec 2023,10 Dec 2023
-Singapore,10 Dec 2023,13 Dec 2023
-Kuala Lumpur,13 Dec 2023,14 Dec 2023
-Cameron Highlands,14 Dec 2023,16 Dec 2023
-Penang,16 Dec 2023,21 Dec 2023
-Langkawi,21 Dec 2023,25 Dec 2023
-Ko Lipe,25 Dec 2023,27 Dec 2023
-Ko Lanta,27 Dec 2023,02 Jan 2024
-Phi Phi,02 Jan 2024,03 Jan 2024
-Phuket,03 Jan 2024,05 Jan 2024
-Khao Sok,05 Jan 2024,08 Jan 2024
-Surat Thani,08 Jan 2024,08 Jan 2024
-Bangkok,08 Jan 2024,13 Jan 2024
-Sukhothai,13 Jan 2024,15 Jan 2024
-Chiang Mai,15 Jan 2024,23 Jan 2024
-Pai,23 Jan 2024,25 Jan 2024
-Mae Hong Son,25 Jan 2024,26 Jan 2024
-Mae Cham,26 Jan 2024,27 Jan 2024
-Chiang Mai,27 Jan 2024,28 Jan 2024
-Pai,28 Jan 2024,30 Jan 2024
-Chiang Mai,30 Jan 2024,31 Jan 2024
-Chiang Rai,31 Jan 2024,3 Feb 2024
-Huay Xia,3 Feb 2024,4 Feb 2024
-Pak Beng,4 Feb 2024,5 Feb 2024
-Luang Prabang,5 Feb 2024,9 Feb 2024
-Vang Vieng,9 Feb 2024,12 Feb 2024
-Vientiane,12 Feb 2024,12 Feb 2024
-Nong Khai,12 Feb 2024,12 Feb 2024
-Bangkok,13 Feb 2024,13 Feb 2024
-Siem Reap,13 Feb 2024,17 Feb 2024
-Phnom Penh,17 Feb 2024,21 Feb 2024
-Sihanoukville,21 Feb 2024,21 Feb 2024
-Ko Rong,21 Feb 2024,25 Feb 2024
-Sihanoukville,25 Feb 2024,25 Feb 2024
-Phnom Penh,25 Feb 2024,26 Feb 2024
-Kuala Lumpur,26 Feb 2024,29 Feb 2024
-Jakarta,29 Feb 2024,4 Mar 2024
-Yogyakarta,4 Mar 2024,7 Mar 2024
-Malang,7 Mar 2024,10 Mar 2024
-Surabaya,10 Mar 2024,11 Mar 2024
-Kuala Lumpur,11 Mar 2024,13 Mar 2024
+Location,Arrive,Depart,Trip
+Kuala Lumpur,05 Dec 2023,07 Dec 2023,Southeast Asia
+Malacca,07 Dec 2023,10 Dec 2023,Southeast Asia
+Singapore,10 Dec 2023,13 Dec 2023,Southeast Asia
+Kuala Lumpur,13 Dec 2023,14 Dec 2023,Southeast Asia
+Cameron Highlands,14 Dec 2023,16 Dec 2023,Southeast Asia
+Penang,16 Dec 2023,21 Dec 2023,Southeast Asia
+Langkawi,21 Dec 2023,25 Dec 2023,Southeast Asia
+Ko Lipe,25 Dec 2023,27 Dec 2023,Southeast Asia
+Ko Lanta,27 Dec 2023,02 Jan 2024,Southeast Asia
+Phi Phi,02 Jan 2024,03 Jan 2024,Southeast Asia
+Phuket,03 Jan 2024,05 Jan 2024,Southeast Asia
+Khao Sok,05 Jan 2024,08 Jan 2024,Southeast Asia
+Surat Thani,08 Jan 2024,08 Jan 2024,Southeast Asia
+Bangkok,08 Jan 2024,13 Jan 2024,Southeast Asia
+Sukhothai,13 Jan 2024,15 Jan 2024,Southeast Asia
+Chiang Mai,15 Jan 2024,23 Jan 2024,Southeast Asia
+Pai,23 Jan 2024,25 Jan 2024,Southeast Asia
+Mae Hong Son,25 Jan 2024,26 Jan 2024,Southeast Asia
+Mae Cham,26 Jan 2024,27 Jan 2024,Southeast Asia
+Chiang Mai,27 Jan 2024,28 Jan 2024,Southeast Asia
+Pai,28 Jan 2024,30 Jan 2024,Southeast Asia
+Chiang Mai,30 Jan 2024,31 Jan 2024,Southeast Asia
+Chiang Rai,31 Jan 2024,3 Feb 2024,Southeast Asia
+Huay Xia,3 Feb 2024,4 Feb 2024,Southeast Asia
+Pak Beng,4 Feb 2024,5 Feb 2024,Southeast Asia
+Luang Prabang,5 Feb 2024,9 Feb 2024,Southeast Asia
+Vang Vieng,9 Feb 2024,12 Feb 2024,Southeast Asia
+Vientiane,12 Feb 2024,12 Feb 2024,Southeast Asia
+Nong Khai,12 Feb 2024,12 Feb 2024,Southeast Asia
+Bangkok,13 Feb 2024,13 Feb 2024,Southeast Asia
+Siem Reap,13 Feb 2024,17 Feb 2024,Southeast Asia
+Phnom Penh,17 Feb 2024,21 Feb 2024,Southeast Asia
+Sihanoukville,21 Feb 2024,21 Feb 2024,Southeast Asia
+Ko Rong,21 Feb 2024,25 Feb 2024,Southeast Asia
+Sihanoukville,25 Feb 2024,25 Feb 2024,Southeast Asia
+Phnom Penh,25 Feb 2024,26 Feb 2024,Southeast Asia
+Kuala Lumpur,26 Feb 2024,29 Feb 2024,Southeast Asia
+Jakarta,29 Feb 2024,4 Mar 2024,Southeast Asia
+Yogyakarta,4 Mar 2024,7 Mar 2024,Southeast Asia
+Malang,7 Mar 2024,10 Mar 2024,Southeast Asia
+Surabaya,10 Mar 2024,11 Mar 2024,Southeast Asia
+Kuala Lumpur,11 Mar 2024,13 Mar 2024,Southeast Asia

@@ -1,42 +1,42 @@
-Start,End,Mode,Date
-Kuala Lumpur,Malacca,Bus,07 Dec 2023
-Malacca,Singapore,Bus,10 Dec 2023
-Singapore,Kuala Lumpur,Bus,13 Dec 2023
-Kuala Lumpur,Cameron Highlands,Bus,14 Dec 2023
-Cameron Highlands,Penang,Bus,16 Dec 2023
-Penang,Langkawi,Plane,21 Dec 2023
-Langkawi,Ko Lipe,Boat,25 Dec 2023
-Ko Lipe,Ko Lanta,Boat,27 Dec 2023
-Ko Lanta,Phi Phi,Boat,2 Jan 2024
-Phi Phi,Phuket,Boat,3 Jan 2024
-Phuket,Khao Sok,Bus,5 Jan 2024
-Khao Sok,Surat Thani,Van,8 Jan 2024
-Surat Thani,Bangkok,Plane,8 Jan 2024
-Bangkok,Sukhothai,Bus,13 Jan 2024
-Sukhothai,Chiang Mai,Bus,15 Jan 2024
-Chiang Mai,Pai,Motorbike,23 Jan 2024
-Pai,Mae Hong Son,Motorbike,25 Jan 2024
-Mae Hong Son,Mae Cham,Motorbike,26 Jan 2024
-Mae Cham,Chiang Mai,Motorbike,27 Jan 2024
-Chiang Mai,Pai,Motorbike,28 Jan 2024
-Pai,Chiang Mai,Van,30 Jan 2024
-Chiang Mai,Chiang Rai,Bus,31 Jan 2024
-Chiang Rai,Huay Xia,Bus,3 Feb 2024
-Huay Xia,Pak Beng,Boat,4 Feb 2024
-Pak Beng,Luang Prabang,Boat,5 Feb 2024
-Luang Prabang,Vang Vieng,Train,9 Feb 2024
-Vang Vieng,Vientiane,Bus,12 Feb 2024
-Vientiane,Nong Khai,Bus,12 Feb 2024
-Nong Khai,Bangkok,Sleeper Train,12 Feb 2024
-Bangkok,Siem Reap,Van,13 Feb 2024
-Siem Reap,Phnom Penh,Bus,17 Feb 2024
-Phnom Penh,Sihanoukville,Van,21 Feb 2024
-Sihanoukville,Ko Rong,Boat,21 Feb 2024
-Ko Rong,Sihanoukville,Boat,25 Feb 2024
-Sihanoukville,Phnom Penh,Van,25 Feb 2024
-Phnom Penh,Kuala Lumpur,Plane,26 Feb 2024
-Kuala Lumpur,Jakarta,Plane,29 Feb 2024
-Jakarta,Yogyakarta,Train,4 Mar 2024
-Yogyakarta,Malang,Train,7 Mar 2024
-Malang,Surabaya,Train,10 Mar 2024
-Surabaya,Kuala Lumpur,Plane,11 Mar 2024
+Start,End,Mode,Date,Trip
+Kuala Lumpur,Malacca,Bus,07 Dec 2023,Southeast Asia
+Malacca,Singapore,Bus,10 Dec 2023,Southeast Asia
+Singapore,Kuala Lumpur,Bus,13 Dec 2023,Southeast Asia
+Kuala Lumpur,Cameron Highlands,Bus,14 Dec 2023,Southeast Asia
+Cameron Highlands,Penang,Bus,16 Dec 2023,Southeast Asia
+Penang,Langkawi,Plane,21 Dec 2023,Southeast Asia
+Langkawi,Ko Lipe,Boat,25 Dec 2023,Southeast Asia
+Ko Lipe,Ko Lanta,Boat,27 Dec 2023,Southeast Asia
+Ko Lanta,Phi Phi,Boat,2 Jan 2024,Southeast Asia
+Phi Phi,Phuket,Boat,3 Jan 2024,Southeast Asia
+Phuket,Khao Sok,Bus,5 Jan 2024,Southeast Asia
+Khao Sok,Surat Thani,Van,8 Jan 2024,Southeast Asia
+Surat Thani,Bangkok,Plane,8 Jan 2024,Southeast Asia
+Bangkok,Sukhothai,Bus,13 Jan 2024,Southeast Asia
+Sukhothai,Chiang Mai,Bus,15 Jan 2024,Southeast Asia
+Chiang Mai,Pai,Motorbike,23 Jan 2024,Southeast Asia
+Pai,Mae Hong Son,Motorbike,25 Jan 2024,Southeast Asia
+Mae Hong Son,Mae Cham,Motorbike,26 Jan 2024,Southeast Asia
+Mae Cham,Chiang Mai,Motorbike,27 Jan 2024,Southeast Asia
+Chiang Mai,Pai,Motorbike,28 Jan 2024,Southeast Asia
+Pai,Chiang Mai,Van,30 Jan 2024,Southeast Asia
+Chiang Mai,Chiang Rai,Bus,31 Jan 2024,Southeast Asia
+Chiang Rai,Huay Xia,Bus,3 Feb 2024,Southeast Asia
+Huay Xia,Pak Beng,Boat,4 Feb 2024,Southeast Asia
+Pak Beng,Luang Prabang,Boat,5 Feb 2024,Southeast Asia
+Luang Prabang,Vang Vieng,Train,9 Feb 2024,Southeast Asia
+Vang Vieng,Vientiane,Bus,12 Feb 2024,Southeast Asia
+Vientiane,Nong Khai,Bus,12 Feb 2024,Southeast Asia
+Nong Khai,Bangkok,Sleeper Train,12 Feb 2024,Southeast Asia
+Bangkok,Siem Reap,Van,13 Feb 2024,Southeast Asia
+Siem Reap,Phnom Penh,Bus,17 Feb 2024,Southeast Asia
+Phnom Penh,Sihanoukville,Van,21 Feb 2024,Southeast Asia
+Sihanoukville,Ko Rong,Boat,21 Feb 2024,Southeast Asia
+Ko Rong,Sihanoukville,Boat,25 Feb 2024,Southeast Asia
+Sihanoukville,Phnom Penh,Van,25 Feb 2024,Southeast Asia
+Phnom Penh,Kuala Lumpur,Plane,26 Feb 2024,Southeast Asia
+Kuala Lumpur,Jakarta,Plane,29 Feb 2024,Southeast Asia
+Jakarta,Yogyakarta,Train,4 Mar 2024,Southeast Asia
+Yogyakarta,Malang,Train,7 Mar 2024,Southeast Asia
+Malang,Surabaya,Train,10 Mar 2024,Southeast Asia
+Surabaya,Kuala Lumpur,Plane,11 Mar 2024,Southeast Asia
