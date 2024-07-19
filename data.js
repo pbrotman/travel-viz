@@ -24,7 +24,6 @@ class Location {
         this.latLng = L.latLng(lat, lng),
         this.country = country,
         this.visits = visits,
-        // this.addVisit = (vis) => {this.visits.push(vis);},
         this.getNights = function(){
             return this.visits.map(vis => vis.nights).reduce((tot, cur) => tot + cur)
         }
@@ -74,7 +73,7 @@ let transits = [];
 transits_init.forEach((trs) => {
     let transit = new Transit(locations_json[trs["Start"]], locations_json[trs["End"]], trs.Mode.toLowerCase(), trs.Date, trs.Trip);
     trips_json[transit.trip].transits.push(transit);
-    transits.push(transit)
+    transits.push(transit);
 });
 
 console.log(transits);
