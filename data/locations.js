@@ -1,4 +1,6 @@
 // Data, as JSON (converted from CSV by data.py)
+const trips_init = 
+[{"Name": "Southeast Asia"}];
 const locations_init = 
 [{"Name": "Kuala Lumpur", "Lat": "3.1319", "Lng": "101.6841", "Country": "Malaysia"}, {"Name": "Malacca", "Lat": "2.1896", "Lng": "102.2501", "Country": "Malaysia"}, {"Name": "Singapore", "Lat": "1.3521", "Lng": "103.8198", "Country": "Singapore"}, {"Name": "Cameron Highlands", "Lat": "4.4679", "Lng": "101.3848", "Country": "Malaysia"}, {"Name": "Penang", "Lat": "5.4141", "Lng": "100.3285", "Country": "Malaysia"}, {"Name": "Langkawi", "Lat": "6.2934", "Lng": "99.7247", "Country": "Malaysia"}, {"Name": "Ko Lipe", "Lat": "6.4886", "Lng": "99.3049", "Country": "Thailand"}, {"Name": "Ko Lanta", "Lat": "7.6065", "Lng": "99.0353", "Country": "Thailand"}, {"Name": "Phi Phi", "Lat": "7.7407", "Lng": "98.7784", "Country": "Thailand"}, {"Name": "Phuket", "Lat": "7.8804", "Lng": "98.3923", "Country": "Thailand"}, {"Name": "Khao Sok", "Lat": "8.9777", "Lng": "98.6382", "Country": "Thailand"}, {"Name": "Surat Thani", "Lat": "9.1341", "Lng": "99.1431", "Country": "Thailand"}, {"Name": "Bangkok", "Lat": "13.7563", "Lng": "100.5018", "Country": "Thailand"}, {"Name": "Sukhothai", "Lat": "17.0076", "Lng": "99.8264", "Country": "Thailand"}, {"Name": "Chiang Mai", "Lat": "18.7883", "Lng": "98.9853", "Country": "Thailand"}, {"Name": "Pai", "Lat": "19.3581", "Lng": "98.4405", "Country": "Thailand"}, {"Name": "Mae Hong Son", "Lat": "19.2990", "Lng": "97.9676", "Country": "Thailand"}, {"Name": "Mae Cham", "Lat": "18.4993", "Lng": "98.3627", "Country": "Thailand"}, {"Name": "Chiang Rai", "Lat": "19.9105", "Lng": "99.8406", "Country": "Thailand"}, {"Name": "Huay Xia", "Lat": "20.2628", "Lng": "100.4340", "Country": "Laos"}, {"Name": "Pak Beng", "Lat": "19.8990", "Lng": "101.1419", "Country": "Laos"}, {"Name": "Luang Prabang", "Lat": "19.8833", "Lng": "102.1387", "Country": "Laos"}, {"Name": "Vang Vieng", "Lat": "18.9213", "Lng": "102.4487", "Country": "Laos"}, {"Name": "Vientiane", "Lat": "17.9757", "Lng": "102.6331", "Country": "Laos"}, {"Name": "Nong Khai", "Lat": "17.8646", "Lng": "102.7310", "Country": "Thailand"}, {"Name": "Siem Reap", "Lat": "13.3633", "Lng": "103.8564", "Country": "Cambodia"}, {"Name": "Phnom Penh", "Lat": "11.5564", "Lng": "104.9282", "Country": "Cambodia"}, {"Name": "Sihanoukville", "Lat": "10.6268", "Lng": "103.5116", "Country": "Cambodia"}, {"Name": "Ko Rong", "Lat": "10.6658", "Lng": "103.2729", "Country": "Cambodia"}, {"Name": "Jakarta", "Lat": "-6.1944", "Lng": "106.8229", "Country": "Indonesia"}, {"Name": "Yogyakarta", "Lat": "-7.8014", "Lng": "110.3648", "Country": "Indonesia"}, {"Name": "Malang", "Lat": "-7.9666", "Lng": "112.6326", "Country": "Indonesia"}, {"Name": "Surabaya", "Lat": "-7.2575", "Lng": "112.7521", "Country": "Indonesia"}]
 const visits_init = 
@@ -6,7 +8,16 @@ const visits_init =
 const transits_init =
 [{"Start": "Kuala Lumpur", "End": "Malacca", "Mode": "Bus", "Date": "07 Dec 2023"}, {"Start": "Malacca", "End": "Singapore", "Mode": "Bus", "Date": "10 Dec 2023"}, {"Start": "Singapore", "End": "Kuala Lumpur", "Mode": "Bus", "Date": "13 Dec 2023"}, {"Start": "Kuala Lumpur", "End": "Cameron Highlands", "Mode": "Bus", "Date": "14 Dec 2023"}, {"Start": "Cameron Highlands", "End": "Penang", "Mode": "Bus", "Date": "16 Dec 2023"}, {"Start": "Penang", "End": "Langkawi", "Mode": "Plane", "Date": "21 Dec 2023"}, {"Start": "Langkawi", "End": "Ko Lipe", "Mode": "Boat", "Date": "25 Dec 2023"}, {"Start": "Ko Lipe", "End": "Ko Lanta", "Mode": "Boat", "Date": "27 Dec 2023"}, {"Start": "Ko Lanta", "End": "Phi Phi", "Mode": "Boat", "Date": "2 Jan 2024"}, {"Start": "Phi Phi", "End": "Phuket", "Mode": "Boat", "Date": "3 Jan 2024"}, {"Start": "Phuket", "End": "Khao Sok", "Mode": "Bus", "Date": "5 Jan 2024"}, {"Start": "Khao Sok", "End": "Surat Thani", "Mode": "Van", "Date": "8 Jan 2024"}, {"Start": "Surat Thani", "End": "Bangkok", "Mode": "Plane", "Date": "8 Jan 2024"}, {"Start": "Bangkok", "End": "Sukhothai", "Mode": "Bus", "Date": "13 Jan 2024"}, {"Start": "Sukhothai", "End": "Chiang Mai", "Mode": "Bus", "Date": "15 Jan 2024"}, {"Start": "Chiang Mai", "End": "Pai", "Mode": "Motorbike", "Date": "23 Jan 2024"}, {"Start": "Pai", "End": "Mae Hong Son", "Mode": "Motorbike", "Date": "25 Jan 2024"}, {"Start": "Mae Hong Son", "End": "Mae Cham", "Mode": "Motorbike", "Date": "26 Jan 2024"}, {"Start": "Mae Cham", "End": "Chiang Mai", "Mode": "Motorbike", "Date": "27 Jan 2024"}, {"Start": "Chiang Mai", "End": "Pai", "Mode": "Motorbike", "Date": "28 Jan 2024"}, {"Start": "Pai", "End": "Chiang Mai", "Mode": "Van", "Date": "30 Jan 2024"}, {"Start": "Chiang Mai", "End": "Chiang Rai", "Mode": "Bus", "Date": "31 Jan 2024"}, {"Start": "Chiang Rai", "End": "Huay Xia", "Mode": "Bus", "Date": "3 Feb 2024"}, {"Start": "Huay Xia", "End": "Pak Beng", "Mode": "Boat", "Date": "4 Feb 2024"}, {"Start": "Pak Beng", "End": "Luang Prabang", "Mode": "Boat", "Date": "5 Feb 2024"}, {"Start": "Luang Prabang", "End": "Vang Vieng", "Mode": "Train", "Date": "9 Feb 2024"}, {"Start": "Vang Vieng", "End": "Vientiane", "Mode": "Bus", "Date": "12 Feb 2024"}, {"Start": "Vientiane", "End": "Nong Khai", "Mode": "Bus", "Date": "12 Feb 2024"}, {"Start": "Nong Khai", "End": "Bangkok", "Mode": "Sleeper Train", "Date": "12 Feb 2024"}, {"Start": "Bangkok", "End": "Siem Reap", "Mode": "Van", "Date": "13 Feb 2024"}, {"Start": "Siem Reap", "End": "Phnom Penh", "Mode": "Bus", "Date": "17 Feb 2024"}, {"Start": "Phnom Penh", "End": "Sihanoukville", "Mode": "Van", "Date": "21 Feb 2024"}, {"Start": "Sihanoukville", "End": "Ko Rong", "Mode": "Boat", "Date": "21 Feb 2024"}, {"Start": "Ko Rong", "End": "Sihanoukville", "Mode": "Boat", "Date": "25 Feb 2024"}, {"Start": "Sihanoukville", "End": "Phnom Penh", "Mode": "Van", "Date": "25 Feb 2024"}, {"Start": "Phnom Penh", "End": "Kuala Lumpur", "Mode": "Plane", "Date": "26 Feb 2024"}, {"Start": "Kuala Lumpur", "End": "Jakarta", "Mode": "Plane", "Date": "29 Feb 2024"}, {"Start": "Jakarta", "End": "Yogyakarta", "Mode": "Train", "Date": "4 Mar 2024"}, {"Start": "Yogyakarta", "End": "Malang", "Mode": "Train", "Date": "7 Mar 2024"}, {"Start": "Malang", "End": "Surabaya", "Mode": "Train", "Date": "10 Mar 2024"}, {"Start": "Surabaya", "End": "Kuala Lumpur", "Mode": "Plane", "Date": "11 Mar 2024"}]
 
-// Define Visit and Location objects
+// Define Trip, Location, Visit and Transit objects
+class Trip {
+    constructor(name, visits = [], transits = []){
+        this.name = name,
+        this.visits = visits,
+        this.transits = transits,
+        this.getLocations = () => visits.map((vis) => vis.location)
+    }
+}
+
 class Visit {
     constructor(arrive, depart){
         this.arrive = new Date(arrive),
@@ -21,7 +32,7 @@ class Location {
         this.latLng = L.latLng(lat, lng),
         this.country = country,
         this.visits = visits,
-        this.addVisit = (vis) => {this.visits.push(vis);}
+        this.addVisit = (vis) => {this.visits.push(vis);},
         this.getNights = function(){
             return this.visits.map(vis => vis.nights).reduce((tot, cur) => tot + cur)
         }
@@ -37,7 +48,12 @@ class Transit {
     }
 }
 
-// Generate JSON of location objects.
+// Create Trips, assign to JSON.
+let trips_json = {};
+trips_init.forEach((trp) => trips_json[trp.Name] = new Trip(trp.Name));
+console.log(trips_json);
+
+// Create Locations, assign to JSON.
 let locations_json = {}
 locations_init.forEach((loc) => locations_json[loc.Name] = (new Location(loc.Name, loc.Lat, loc.Lng, loc.Country)));
 

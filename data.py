@@ -14,6 +14,7 @@ def csv_to_json(data_name, in_csv_path, out_json_path):
     data_json = json.dumps({data_name: data_list})
     json_file.write(data_json)
 
+csv_to_json("trips", "data/trips.csv", "data/trips.json")
 csv_to_json("locations", "data/locations.csv", "data/locations.json")
 csv_to_json("visits", "data/visits.csv", "data/visits.json")
 csv_to_json("transits", "data/transits.csv", "data/transits.json")
