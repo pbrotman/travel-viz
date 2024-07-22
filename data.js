@@ -26,7 +26,11 @@ class Location {
         this.country = country,
         this.visits = visits,
         this.getNights = function(){
-            return this.visits.map(vis => vis.nights).reduce((tot, cur) => tot + cur)
+            if(visits.length>0){
+                return(this.visits.map(vis => vis.nights).reduce((tot, cur) => tot + cur));
+            } else {
+                return(0);
+            }
         }
     }
 }
