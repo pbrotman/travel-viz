@@ -31,7 +31,7 @@ class Location {
 }
 
 class Visit {
-    constructor(location, arrive, depart, trip, transits = []){
+    constructor(location, arrive, depart, trip, transits = {}){
         this.location = location,
         this.arrive = new Date(arrive),
         this.depart = new Date(depart),
@@ -67,12 +67,22 @@ visits_init.forEach((vis) => {
     locations_json[visit.location].visits.push(visit);
 });
 
-// Create Transits (with references to Locations), assign to Trip and transits array.
+// Create Transits (with references to Locations), assign to Trip, Visits, and transits array.
 let transits = [];
 
 transits_init.forEach((trs) => {
     let transit = new Transit(locations_json[trs["Start"]], locations_json[trs["End"]], trs.Mode.toLowerCase(), trs.Date, trs.Trip);
-    trips_json[transit.trip].transits.push(transit);
+    let thisTrip = trips_json[transit.trip];
+
+    thisTrip.transits.push(transit);
+    thisTrip.visits.forEach((vis) => {
+        if(vis.location === transit.start.name & vis.depart.getTime() === transit.date.getTime()){
+            vis.transits.depart = transit;
+        }
+        if(vis.location === transit.end.name & vis.arrive.getTime() === transit.date.getTime()){
+            vis.transits.arrive = transit;
+        }
+    })
     transits.push(transit);
 });
 
