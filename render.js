@@ -61,19 +61,28 @@ function styleTransit(trs){
     return style
 }
 
+// Format visit and transit dates in tooltips
+function datesTooltip(start, end){
+    if(start.date.getTime() === end.date.getTime()){
+        return start.date.toDateString();
+    } else {
+        return `${start.date.toDateString()} - ${end.date.toDateString()}`
+    }
+}
+
 // Plot transits
 let transitLines = transits.map((trs) => {
 
-    //Line
+    // Line
     let trsLine = L.polyline([trs.start.location.latLng, trs.end.location.latLng], 
         styleTransit(trs));
     trsLine.addTo(map);
 
-    //Tooltip
+    // Tooltip
     let toolTip = L.tooltip()
         .setLatLng(trsLine.getCenter())
         .setContent(`
-            <b> ${trs.start.date.toDateString()} </b> <br/>
+            <b> ${datesTooltip(trs.start, trs.end)} </b> <br/>
             ${trs.start.location.name} &rarr; ${trs.end.location.name}<br/>
             `);
     trsLine.on("mouseover", () => {
@@ -102,22 +111,13 @@ let locationCircles = locations.map((loc) => {
     })
     locCircle.addTo(map);
 
-    // Display visit dates in tooltip
-    function datesTooltip(vis){
-        if(vis.arrive.date.getTime() === vis.depart.date.getTime()){
-            return vis.arrive.date.toDateString();
-        } else {
-            return `${vis.arrive.date.toDateString()} - ${vis.depart.date.toDateString()}`
-        }
-    }
-
     // Tooltip
     let toolTip = L.tooltip()
         .setLatLng(loc.latLng)
         .setContent(`
             <b>${loc.name} - ${loc.country}</b> <br/>
             Nights stayed: ${loc.getNights()} <br/>
-            Dates visited: ${loc.visits.map((vis) => `<br/> <li>${datesTooltip(vis)}`)}
+            Dates visited: ${loc.visits.map((vis) => `<br/> <li>${datesTooltip(vis.arrive, vis.depart)}`)}
             `);
     locCircle.on("mouseover", () => {
         toolTip.addTo(map);
