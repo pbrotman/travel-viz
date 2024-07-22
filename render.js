@@ -104,10 +104,10 @@ let locationCircles = locations.map((loc) => {
 
     // Display visit dates in tooltip
     function datesTooltip(vis){
-        if(vis.arrive.getTime() === vis.depart.getTime()){
-            return vis.arrive.toDateString();
+        if(vis.arrive.date.getTime() === vis.depart.date.getTime()){
+            return vis.arrive.date.toDateString();
         } else {
-            return `${vis.arrive.toDateString()} - ${vis.depart.toDateString()}`
+            return `${vis.arrive.date.toDateString()} - ${vis.depart.date.toDateString()}`
         }
     }
 

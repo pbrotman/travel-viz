@@ -31,13 +31,12 @@ class Location {
 }
 
 class Visit {
-    constructor(location, arrive, depart, trip, transits = {}){
-        this.location = location,
-        this.arrive = new Date(arrive),
-        this.depart = new Date(depart),
+    constructor(location, dateArrive, dateDepart, trip){
         this.trip = trip,
-        this.transits = transits,
-        this.nights = Math.round((this.depart.getTime() - this.arrive.getTime()) / (1000 * 3600 * 24))
+        this.location = location,
+        this.arrive = {"date": new Date(dateArrive), "transit": null};
+        this.depart = {"date": new Date(dateDepart), "transit": null};
+        this.nights = Math.round((this.depart.date.getTime() - this.arrive.date.getTime()) / (1000 * 3600 * 24))
     }
 }
 
@@ -77,11 +76,11 @@ transits_init.forEach((trs) => {
 
     thisTrip.transits.push(transit);
     thisTrip.visits.forEach((vis) => {
-        if(vis.location.name === transit.start.name & vis.depart.getTime() === transit.date.getTime()){
-            vis.transits.depart = transit;
+        if(vis.location.name === transit.start.name & vis.depart.date.getTime() === transit.date.getTime()){
+            vis.depart.transit = transit;
         }
-        if(vis.location.name === transit.end.name & vis.arrive.getTime() === transit.date.getTime()){
-            vis.transits.arrive = transit;
+        if(vis.location.name === transit.end.name & vis.arrive.date.getTime() === transit.date.getTime()){
+            vis.arrive.transit = transit;
         }
     })
     transits.push(transit);
