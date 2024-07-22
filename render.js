@@ -65,7 +65,7 @@ function styleTransit(trs){
 let transitLines = transits.map((trs) => {
 
     //Line
-    let trsLine = L.polyline([trs.start.latLng, trs.end.latLng], 
+    let trsLine = L.polyline([trs.start.location.latLng, trs.end.location.latLng], 
         styleTransit(trs));
     trsLine.addTo(map);
 
@@ -73,8 +73,8 @@ let transitLines = transits.map((trs) => {
     let toolTip = L.tooltip()
         .setLatLng(trsLine.getCenter())
         .setContent(`
-            <b> ${trs.date.toDateString()} </b> <br/>
-            ${trs.start.name} &rarr; ${trs.end.name}<br/>
+            <b> ${trs.start.date.toDateString()} </b> <br/>
+            ${trs.start.location.name} &rarr; ${trs.end.location.name}<br/>
             `);
     trsLine.on("mouseover", () => {
         toolTip.addTo(map);

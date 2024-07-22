@@ -34,17 +34,16 @@ class Visit {
     constructor(location, dateArrive, dateDepart, trip){
         this.trip = trip,
         this.location = location,
-        this.arrive = {"date": new Date(dateArrive), "transit": null};
-        this.depart = {"date": new Date(dateDepart), "transit": null};
+        this.arrive = {"date": new Date(dateArrive), "transit": null},
+        this.depart = {"date": new Date(dateDepart), "transit": null},
         this.nights = Math.round((this.depart.date.getTime() - this.arrive.date.getTime()) / (1000 * 3600 * 24))
     }
 }
 
 class Transit {
     constructor(start, end, mode, date, trip){
-        this.start = start, // reference to location object
-        this.end = end, // reference to location object
-        this.date = new Date(date),
+        this.start = {"date": new Date(date), "location": start},
+        this.end = {"date": new Date(date), "location": end}
         this.trip = trip,
         this.mode = mode
     }
@@ -76,10 +75,10 @@ transits_init.forEach((trs) => {
 
     thisTrip.transits.push(transit);
     thisTrip.visits.forEach((vis) => {
-        if(vis.location.name === transit.start.name & vis.depart.date.getTime() === transit.date.getTime()){
+        if(vis.location.name === transit.start.location.name & vis.depart.date.getTime() === transit.start.date.getTime()){
             vis.depart.transit = transit;
         }
-        if(vis.location.name === transit.end.name & vis.arrive.date.getTime() === transit.date.getTime()){
+        if(vis.location.name === transit.end.location.name & vis.arrive.date.getTime() === transit.end.date.getTime()){
             vis.arrive.transit = transit;
         }
     })
