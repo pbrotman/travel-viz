@@ -27,6 +27,8 @@ var CartoDB_Voyager = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles
 // Color by country
 let countryColor = function(country){
     switch(country){
+
+        // Southeast Asia
         case "Malaysia":
             return("Gold");
         case "Singapore":
@@ -39,6 +41,32 @@ let countryColor = function(country){
             return("#E49B0F"); //Gamboge
         case "Indonesia":
             return("IndianRed");
+
+        // Americas
+        case "Guatemala":
+            return("DarkGreen");
+
+        // Europe
+        case "France":
+            return("DodgerBlue");
+        case "Germany":
+            return("DimGrey");
+        case "Hungary":
+            return("OliveDrab");
+        case "Austria":
+            return("FireBrick");
+        case "Slovakia":
+            return("Black");
+        case "Czechia":
+            return("DarkSlateBlue");
+        case "Netherlands":
+            return("Orange")
+
+        // Middle East
+        case "Turkey":
+            return("IndianRed")
+        case "Israel":
+            return("RoyalBlue")
     }
 }
 
@@ -107,7 +135,7 @@ let locationCircles = locations.map((loc) => {
         color: countryColor(loc.country),
         fillColor: countryColor(loc.country),
         fillOpacity: .8,
-        radius: 20000 * Math.sqrt(loc.getNights()),
+        radius: 20000 * Math.sqrt(loc.getNights() < 25 ? loc.getNights() : 25),
     })
     locCircle.addTo(map);
 
