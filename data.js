@@ -62,9 +62,10 @@ locations_init.forEach((loc) => locations_json[loc.Name] = new Location(loc.Name
 
 // Create Visits, assign to Trip and Location.
 visits_init.forEach((vis) => {
-    let visit = new Visit(vis.Location, vis.Arrive, vis.Depart, vis.Trip);
+    let visit = new Visit(locations_json[vis["Location"]], vis.Arrive, vis.Depart, vis.Trip);
+
     trips_json[visit.trip].visits.push(visit);
-    locations_json[visit.location].visits.push(visit);
+    locations_json[visit.location.name].visits.push(visit);
 });
 
 // Create Transits (with references to Locations), assign to Trip, Visits, and transits array.
@@ -76,10 +77,10 @@ transits_init.forEach((trs) => {
 
     thisTrip.transits.push(transit);
     thisTrip.visits.forEach((vis) => {
-        if(vis.location === transit.start.name & vis.depart.getTime() === transit.date.getTime()){
+        if(vis.location.name === transit.start.name & vis.depart.getTime() === transit.date.getTime()){
             vis.transits.depart = transit;
         }
-        if(vis.location === transit.end.name & vis.arrive.getTime() === transit.date.getTime()){
+        if(vis.location.name === transit.end.name & vis.arrive.getTime() === transit.date.getTime()){
             vis.transits.arrive = transit;
         }
     })
