@@ -137,6 +137,15 @@ console.log(transitLines);
 // Plot locations
 let locationCircles = locations.map((loc) => {
 
+    function circleRadius(loc){
+        const c = 20000;
+        const nights = loc.getNights();
+        const theta = loc.latLng.lat * Math.PI/180;
+        const distortion = (1/Math.cos(theta))**2; // Mercator distortion = sec^2(lat) -- https://www.marksmath.org/classes/common/MapProjection.pdf
+
+        return c * Math.sqrt(nights < 36 ? nights/distortion : 36/distortion)
+    }
+
     // Circle
     let locCircle = L.circle([loc.latLng.lat, loc.latLng.lng], {
         stroke: true,
@@ -144,8 +153,7 @@ let locationCircles = locations.map((loc) => {
         color: countryColor(loc.country),
         fillColor: countryColor(loc.country),
         fillOpacity: .8,
-        radius: 20000 * Math.sqrt(loc.getNights() < 25 ? loc.getNights() : 25),
-        // radius: 20000 * Math.sqrt(loc.getNights()),
+        radius: circleRadius(loc),
     })
     locCircle.addTo(map);
 
