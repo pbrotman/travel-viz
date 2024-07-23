@@ -45,22 +45,31 @@ let countryColor = function(country){
         // Americas
         case "Guatemala":
             return("DarkGreen");
+        case "Costa Rica":
+            return("LightSkyBlue");
 
         // Europe
         case "France":
             return("DodgerBlue");
         case "Germany":
-            return("DimGrey");
+            return("DimGray");
+            // return("Black");
         case "Hungary":
             return("OliveDrab");
         case "Austria":
-            return("FireBrick");
+            return("Crimson");
         case "Slovakia":
             return("Black");
         case "Czechia":
-            return("DarkSlateBlue");
+            return("GoldenRod");
         case "Netherlands":
-            return("Orange")
+            return("Orange");
+        case "United Kingdom":
+            return("FireBrick");
+        case "Ireland":
+            return("Green");
+        case "Switzerland":
+            return("Gray");
 
         // Middle East
         case "Turkey":
@@ -136,6 +145,7 @@ let locationCircles = locations.map((loc) => {
         fillColor: countryColor(loc.country),
         fillOpacity: .8,
         radius: 20000 * Math.sqrt(loc.getNights() < 25 ? loc.getNights() : 25),
+        // radius: 20000 * Math.sqrt(loc.getNights()),
     })
     locCircle.addTo(map);
 
